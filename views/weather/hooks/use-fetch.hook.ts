@@ -14,7 +14,7 @@ export const useFetch = (city: string): UseFetchHookInterface => {
   const [error, setError] = useState<Error | null>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
 
-  const fetchCity = useCallback(async (name: string): void => {
+  const fetchCity = useCallback(async (name: string): Promise<void> => {
     setLoading(true);
 
     try {

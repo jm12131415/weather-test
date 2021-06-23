@@ -8,7 +8,7 @@ export interface WeatherProps {
 export const WeatherView: FunctionComponent<WeatherProps> = () => {
   const [city, setCity] = useState<string>('');
 
-  const { fetchCity, cityData, error, isLoading } = useFetch(city);
+  const { cityData, error, isLoading } = useFetch(city);
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setCity(e.target.value);
